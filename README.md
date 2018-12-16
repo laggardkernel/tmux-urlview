@@ -56,6 +56,12 @@ You should now be able to use the plugin.
 
 Put `set -g @urlview-key 'x'` in `tmux.conf`.
 
+> How can I declare the extractor used to get URLs explicitly?
+
+Put `set -g @urlview-extractor 'extract_url'` in `tmux.conf`. When no extractor
+is set, `urlview` or `extract_url` is used if they're available. And `urlview`
+has a higher priority than `extract_url` by default.
+
 ### Other goodies
 
 `tmux-urlview` works great with:

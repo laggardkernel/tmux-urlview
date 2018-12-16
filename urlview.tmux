@@ -20,7 +20,7 @@ find_executable() {
 }
 
 readonly key="$(get_tmux_option "@urlview-key" "u")"
-readonly cmd="$(find_executable)"
+readonly cmd="$(get_tmux_option "@urlview-extractor" "$(find_executable)")"
 
 if [ -z "$cmd" ]; then
   tmux display-message "Failed to load tmux-urlview: neither urlview nor extract_url were found on the PATH"
